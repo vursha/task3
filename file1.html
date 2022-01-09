@@ -1,0 +1,58 @@
+<script>
+//getters and setters in class:
+
+class user{
+    constructor(f,l,e,a){
+        this.firstName=f;
+        this.lastName=l;
+        this.emailId=e;
+        this.age=a;
+    }
+
+get display(){
+    return `FirstName=${this.firstName} LastName=${this.lastName} EmailId=${this.emailId} Age=${this.age}`
+}
+set EmailId(value){
+    this.emailId=value;
+}
+}
+let user1=new user("ashok","kumar","abc@gmail.com",21);
+user1.emailId= "xyz@gmail.com";
+console.log(`after changed emailid
+               ${user1.display}`);
+user1.lastName="shiva";
+console.log(`after changed lastname ${user1.display}`);  
+
+
+//sort an array:
+const numbers=[34,4,64,12,78]
+let results=numbers.sort();
+console.log(results);
+
+//find a num in array:
+let result1=numbers.find((value) =>{
+    return value>50;
+})
+console.log(result1);
+
+//filter a num in array:
+let result2=numbers.filter((value) =>{
+    return value>50;
+})
+console.log(result2);
+
+//map in array:
+let result3=numbers.map((value) =>{
+    return "#" + value;
+})
+console.log(result3);
+
+//reduce in array:
+let result4=numbers.reduce((acc,value) =>{
+    return acc * value;
+})
+console.log(result4);
+
+
+
+</script>

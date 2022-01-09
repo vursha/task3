@@ -170,8 +170,33 @@
         console.log("g value is:" +g);
         console.log("h value is:" +h);
     }	
-   
 
+    //variable hoisting:
+    a=10;
+    console.log(a);
+    var a;
+
+    //self invoking function hoisting:
+    //let name1="abc"
+    (function (){
+        let name="pqr"
+        console.log(name)
+    })();
+
+    /*a();
+    function a(){
+        console.log("hello");
+    };*/
+
+    //obj hoisting: - undefined
+    console.log(ab);
+    var ab={
+        name:"abs"
+    };
+
+
+    
+    
 	
     
 
